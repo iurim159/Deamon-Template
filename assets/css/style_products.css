@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+:root{
+    --background: #000;
+    --background2: #0a0a0a;
+    --buttons: #9277F7;
+    --written: #fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background2);
+    color: var(--written);
+    font-family: 'Share Tech Mono', monospace;
+    text-align: justify;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section{
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button{
+    text-decoration: none;
+    border: none;
+}
+
+/*loader*/
+div#loading-wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#loading{
+    width: 100px;
+    display: flex;
+    justify-content: center;   
+}
+
+#loading > span{
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background-color: var(--written);
+    padding: 5px;
+    border-radius: 50%;
+    animation: animazione 1.5s linear infinite;
+}
+
+#loading > span:nth-child(1){
+    animation-delay: .2s;
+}
+
+#loading > span:nth-child(2){
+    animation-delay: .4s;
+}
+
+#loading > span:nth-child(3){
+    animation-delay: .6s;
+}
+
+/*header*/
+header{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12%;
+    background-color: var(--background);
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s ease;
+    z-index: 3;
+}
+
+header div{
+    margin-left: 1.5%;
+    height: 4em;
+    width: 4em;
+    background-image: url(../img/icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    margin-right: 20px;
+}
+
+header ul li{
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+header ul li a{
+    color: white;
+    padding: 7px;
+    transition: .2s ease-in-out;
+    border-radius: 10%;
+}
+
+header ul li a:hover{
+    color: rgb(255, 255, 255);
+    background-color: var(--buttons);
+    padding: 8px;
+    box-shadow: 5px 5px 80px rgb(0 0 0);
+}
+
+/*product*/
+.video{
+    width: 50%;
+    height: 50vh;
+    margin-top: 6%;
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.description{
+    position: static;
+    width: 70%;
+}
+
+.description h1{
+    text-align: center;
+}
+
+.description p{
+    padding: 10px;
+}
+
+.description a{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    padding: 0.4rem 1.9rem;
+    font-size: 30px;
+    color: var(--written);
+    background-color: var(--buttons);
+    border-radius: 0px 0px 8px 8px;
+    transition: 0.3s ease;
+}
+
+.description a:hover{
+    font-size: 35px;
+}
+
+/*product images*/
+.product1{
+    background-image: url(../img/Product.jpg);
+}
+.product2{
+    background-image: url(../img/Product.jpg);
+}
+.product3{
+    background-image: url(../img/Product.jpg);
+}
+.product4{
+    background-image: url(../img/Product.jpg);
+}
+.product5{
+    background-image: url(../img/Product.jpg);
+}
+.product6{
+    background-image: url(../img/Product.jpg);
+}
+.product7{
+    background-image: url(../img/Product.jpg);
+}
+.product8{
+    background-image: url(../img/Product.jpg);
+}
+
+/*media queries*/
+@media(max-width:690px){
+    .video{
+        transform: scale(50%);
+        width: 70vh;
+        height: 40vh;
+    }
+}
